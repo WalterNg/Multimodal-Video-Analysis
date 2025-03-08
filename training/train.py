@@ -38,9 +38,9 @@ def parse_args():
 
 def main():
     # Install FFMPEG
-    # if not install_ffmpeg():
-    #     print("FFmpeg installation failed. Cannot continue training.")
-    #     sys.exit(1)
+    if not install_ffmpeg():
+        print("FFmpeg installation failed. Cannot continue training.")
+        sys.exit(1)
 
     print("Available audio backends:")
     print(str(torchaudio.list_audio_backends()))

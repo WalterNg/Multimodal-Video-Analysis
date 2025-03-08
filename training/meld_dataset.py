@@ -106,7 +106,6 @@ class MELDDataset(Dataset):
                 else:
                     mel_spec = mel_spec[:, :, :300]     # Channels, Frequency spin, timestep
 
-                print(mel_spec.shape)
                 return mel_spec
 
             except subprocess.CalledProcessError as e:
